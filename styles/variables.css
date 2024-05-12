@@ -2,3 +2,20 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --color_acsent: #FF0070;
+  --color_acsent_rec: #FF0070;
+  --color_acsent_title: #FF0070;
+  --color_acsent_text:#FF0070;
+  --text_color:#F1B2CE;
+  --text_color_FOCUS:#DB00FF;
+  --text_weight_main:400;
+  --text_weight_header:700;
+  --text_lh:23.4px;
+  --text-color_night:#000028;
+  --bg_image: url(../images/cover-image-dark.png);
+  --bg_fon:rgba(255, 241, 247, 1);
+
+
+}
