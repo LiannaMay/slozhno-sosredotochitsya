@@ -67,7 +67,6 @@
 
 }
 
-
 .assent_element::after {
   inset-inline-end: 0;
   inset-block-start: 50%;
@@ -116,17 +115,22 @@
   border: none;
   text-transform: lowercase;
 }
-.header__theme-menu-button:hover{
+
+.header__theme-menu-button:hover {
   border: 1px solid var(--color_acsent_text);
 }
-.header__theme-menu-button:focus{
+
+.header__theme-menu-button:focus {
   border: none;
 }
+
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--color_acsent_text);
 }
+
 .header__theme-menu-button_active {
   border-bottom: 1px solid var(--color_acsent_text);
+  pointer-events: none;
 }
 
 .header_title {
@@ -179,7 +183,6 @@
 }
 
 .section {
-  /* margin: 80px 20px 0 20px; */
   position: relative;
   display: grid;
   padding-top: 60px;
@@ -210,9 +213,9 @@
   align-items: start;
   /* padding: 0px 20px 0 0; */
   grid-template-columns: min-content 1fr;
-  grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content;
-
+  grid-auto-rows: repeat(12, min-content);
 }
+
 .section_image {
   position: relative;
   max-width: 984px;
@@ -232,15 +235,18 @@
   text-align: left;
   max-width: 315px;
 }
+
 .title_multitasking {
   grid-column: 1 / 2;
   grid-row: 1 / span 2;
   min-width: 315px;
 }
+
 .title_concentration {
   grid-column: 1 / span 3;
   min-width: 315px;
 }
+
 .title_goldfish {
   grid-column: 1 / 2;
   grid-row: 1 / span 2;
@@ -248,7 +254,6 @@
 }
 
 .title_paragraf {
-  /* grid-column-start: 2; */
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight:var(--text_weight_header);
@@ -256,19 +261,21 @@
   line-height: 23px;
   color: var(--text-color_night);
   background-color: var(--color_acsent);
-
 }
 .paragraf_multitasking {
   grid-column-start: 2;
 }
+
 .paragraf_concentration {
   grid-row-start: 2;
 }
+
 .paragraf_goldfish {
   grid-column-start: 2;
   font-weight:var(--text_weight_main);
 }
-.paragraf_goldfish:nth-child(2){
+
+.paragraf_goldfish:nth-child(2) {
   font-weight:var(--text_weight_header);
 }
 
@@ -278,8 +285,7 @@
   grid-column: 1 / span 3;
 }
 
-.text_general {
-  /* grid-column-start: 2; */
+.text_general { 
   font-family: 'IBM Plex Mono',monospace;
   font-style: normal;
   font-weight: var(--text_weight_main);
@@ -287,12 +293,15 @@
   line-height: 23px;
   color: var(--text_color);
 }
+
 .text_general_multitasking {
   grid-column-start: 2;
 }
+
 .text_general_concentration {
   grid-row-start: 3;
 }
+
 .text_general_goldfish {
   margin-top: -10px;
   grid-column-start: 2;
@@ -303,37 +312,30 @@
   object-position: center;
   width: 100%;
   height: 100%;
-  
 }
+
 .image_sunset {
-  /* max-width: 649px;
-  max-height: 260px; */
   grid-column: 1 / span 2;
   grid-row: 2;
 }
+
 .image_ice_cream {
-  /* max-width: 315px;
-  max-height: 595px; */
   grid-column: 3;
   grid-row-start: 2;
   grid-row-end: 4;
 }
+
 .image_tape {
-  /* max-width: 315px;
-  max-height: 768px; */
   grid-column: 1;
   grid-row: 3 / span 2;
 }
 
 .image_books {
-  /* max-width: 315px;
-  max-height: 315px; */
   grid-column: 2;
   grid-row: 3;
 }
+
 .image_street {
-  /* max-width: 649px;
-  max-height: 428px; */
   grid-column: 2 / span 2;
   grid-row: 4;
 }
@@ -383,4 +385,68 @@
   text-align: left;
   text-shadow: 2px 2px 0px var(--color_acsent_title);
   line-height: 82.5%;
+}
+
+/* МЕДИА ЗАПРОСЫ ДЛЯ ЭКРАНА 768 */
+
+@media (width <= 768px) {
+  .page {
+    max-width: 768px;
+  }
+
+  .header {
+    grid-template-rows: 1fr 1fr 1fr;
+    max-height: 100vh;
+  }
+  .header_title {
+    max-width: 577px;
+    font-size: 120px;
+  }
+  .header__theme-menu {
+    align-self: flex-end;
+    justify-self: right;
+  }
+  .header__theme-menu-list {
+    padding-top: 146px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .header_text {
+    white-space: pre-wrap;
+    align-items: start;
+    max-width: 364px;
+    margin-left: 0;
+  }
+  .title_multitasking {
+    min-width: 236px;
+  }
+
+  .section_concentration {
+    grid-template-columns: 1fr;
+    grid-auto-rows: repeat(6, min-content);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+  .title_concentration {
+    grid-column: 1;
+    min-width: 236px;
+  }
+  .paragraf_concentration {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .text_general_concentration {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .title_goldfish {
+    min-width: 236px;
+  }
+  .section_goldfish {
+    /* margin-top: 5px; */
+    /* row-gap: 10px; */
+    line-height: 23.4px;
+  }
+
 }

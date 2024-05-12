@@ -18,3 +18,14 @@
   --color_acsent_rec: rgba(255, 194, 230, 0);
 
 }
+@media (prefers-color-scheme: light) {
+  :root {
+    --color_acsent:rgba(255, 141, 203, 1);
+    --text_color:rgba(53, 52, 48, 1);
+    --text_color_FOCUS:rgba(255, 194, 230, 1);
+    --bg_image: url(../images/cover-image-light.png);
+    --text-color_night:#000028;
+    --color_acsent_text:rgba(53, 52, 48, 1);
+    --color_acsent_rec: rgba(255, 194, 230, 0);    
+    }
+  }
