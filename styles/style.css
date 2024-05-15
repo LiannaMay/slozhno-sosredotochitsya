@@ -179,6 +179,7 @@
 }
 
 .text_link:focus-visible {
+  outline: none;
   border: 1px solid var(--text_color);
 }
 
@@ -231,7 +232,7 @@
   font-style: normal;
   font-weight:var(--text_weight_header);
   line-height: 23px;
-  color:var(--color_acsent);
+  color:var(--color_acsent_text);
   font-size: 18px;
   text-align: left;
   max-width: 315px;
@@ -400,9 +401,9 @@
 /* МЕДИА ЗАПРОСЫ ДЛЯ ЭКРАНА 768 */
 
 @media (width <= 768px) {
-  .page {
+  /* .page {
     max-width: 768px;
-  }
+  } */
 
   .header {
     grid-template-rows: 1fr 1fr 1fr;
@@ -491,7 +492,203 @@
 
 /* МЕДИА ЗАПРОСЫ ДЛЯ ЭКРАНА 375 */
 
-
 @media (width <= 459px) {
 
+  .header {
+    /* padding-bottom: 100px; */
+
+  }
+  .header {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: end;
+    position: relative;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    
+  }
+  .header__theme-menu {
+    min-height: 98px;
+    align-self: start;
+    justify-self: right;
+    display: grid;
+    justify-content: center;
+  
+  }
+  .header__theme-menu-list {
+    /* padding-bottom: 52px; */
+    padding-top: 52px;
+  }
+  
+  .header_title {
+    align-self: start;
+    max-width: 355px;
+    font-size: 116px;
+    margin-left: 0px;
+    margin-bottom: -25px;
+  }
+  .header_text {
+    margin-top: 0;
+    align-self: flex-start;
+    max-width: 355px;
+    margin-left: 0;
+  }
+  .decorated-zone::before {
+    right: 10px;
+    top: 20px;
+  }
+  .assent_element {
+    right: 35px;
+  
+  }
+  .decorated-zone::after {
+    left: 10px;
+    bottom: 10px;
+  
+  }
+
+  .content {
+    margin: -20px 20px 0 20px;
+    display: grid;
+  }
+  .section__multitasking {
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr min-content 1fr min-content 1fr;
+    row-gap: 15px;
+    column-gap: 0;
+  }
+
+  .title_multitasking {
+    /* margin: 20px 0 0 0; */
+    grid-column: 1;
+    /* grid-row: auto; */
+    min-width: 355px;
+  }
+
+  .paragraf_multitasking {
+    /* margin: 20px 0 0 0; */
+    grid-column-start: 1;
+  }
+  
+  .text_general_multitasking {
+    grid-column-start: 1;
+  }
+
+  .section_concentration {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    row-gap: 0;
+    column-gap: 0;
+    max-width: 355px;
+  }
+  .title_concentration {
+    grid-column: 1;
+    min-width: 315px;
+    max-width: 355px;
+  }
+  .paragraf_concentration {
+    margin: 0 0 0 0;
+    grid-row-start: auto;
+  }
+  .text_general_concentration {
+    /* margin-top: 10px; */
+    grid-row-start: auto;
+    padding-top: 10px;
+  }
+  .section_goldfish {
+    margin-top: -13px;
+    column-gap: 0;
+    align-items: start;
+    grid-template-columns: min-content;
+    grid-auto-rows:min-content;
+    max-width: 355px;
+  }
+  .title_goldfish {
+    grid-column: 1;
+    grid-row: auto;
+    min-width: 355px;
+    max-width: 355px;
+    padding: 0 0 20px 0;
+  }
+  .paragraf_goldfish {
+    margin: 20px 0 0 0;
+    grid-column-start: 1;
+    font-weight:var(--text_weight_main);
+  }
+  
+  .text_general_goldfish {
+    margin-top: 10px;
+    grid-column-start: 1;
+  }
+
+  .section_image {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: start;
+    gap: 10px;
+  }
+  
+  .paragraf_image {
+    margin-top: 10px;
+    max-width: 375px;
+    grid-column: 1;
+  }
+
+  .image_general {
+    object-fit:cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image_sunset {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  
+  .image_ice_cream {
+    grid-column: 1;
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
+  
+  .image_tape {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  
+  .image_books {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  
+  .image_street {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .footer {
+    min-height: 668px;
+    margin-top: 40px;
+  }
+  
+  .footer::before {
+    right: 10px;
+    top: 10px;
+  }
+  
+  .footer::after {
+    position: absolute;
+    content: "";
+    border-bottom:1px solid var(--color_acsent);
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid var(--color_acsent);
+    left: 20px;
+    bottom: 10px;
+  }
+  
+  .footer_title {
+    padding-top: 0px;
+  }
 }
