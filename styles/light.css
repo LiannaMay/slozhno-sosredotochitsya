@@ -32,5 +32,10 @@
     --color_acsent_rec: rgba(255, 194, 230, 0);
     --bg_fon:rgba(255, 241, 247, 1);
     }
-
+    .assent_element::before {
+      position: absolute;
+      content: "";
+      top: 0px;
+      right: 0px;
+    }
   }
