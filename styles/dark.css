@@ -11,8 +11,13 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --color_acsent: #FF0070;
+  --color_acsent_rec: #FF0070;
+  --color_acsent_title: #FF0070;
+  --color_acsent_text:#FF0070;
   --text_color:#F1B2CE;
   --text_color_FOCUS:#DB00FF;
   --text-color_night:#000028;
+  --bg_image: url(../images/cover-image-dark.png);
   --bg_fon:rgba(0,12,55, 1);
+  --color_acsent_hover:rgba(50, 49, 45, 0.4);
 }
