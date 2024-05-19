@@ -435,7 +435,8 @@
 
 /* МЕДИА ЗАПРОСЫ ДЛЯ ЭКРАНА 375 */
 
-@media (width <= 478px) {
+@media (width <= 550px) {
+
   .header {
     height: 100%;
     padding: 10px;
@@ -467,56 +468,52 @@
     padding: 10px;
   }
 
+  .section {
+    display: block;
+  }
+
   .section__multitasking {
-    row-gap: 13px;
     margin-top: 32px;
-    grid-template-columns: min-content;
-    grid-template-rows: auto;
   }
 
   .title_multitasking {
     grid-column: 1;
-    min-width: 355px;
+    /* min-width: 355px; */
   }
 
   .paragraf_multitasking {
-    grid-column-start: 1;
+    margin: 18px 0 0 0;
   }
 
   .text_general_multitasking {
-    grid-column-start: 1;
+    padding: 10px 0 13px 0;
   }
 
   .section_concentration {
     margin-top: 40px;
     grid-template-rows: min-content min-content 1fr;
-    max-width: 355px;
+    /* max-width: 355px; */
   }
 
   .title_concentration {
-    grid-column: 1;
+    margin: 0 0 20px 0;
     min-width: 315px;
     max-width: 355px;
   }
 
   .paragraf_concentration {
     margin: 0 0 0 0;
-    grid-row-start: auto;
   }
 
   .text_general_concentration {
-    grid-row-start: auto;
+    margin: 0 0 20px 0;
   }
 
   .section_goldfish {
-    margin-top: 55px;
-    grid-template-columns: min-content;
-    grid-auto-rows: min-content;
+    margin-top: 34px;
   }
 
   .title_goldfish {
-    grid-column: 1;
-    grid-row: auto;
     min-width: 355px;
     max-width: 355px;
     padding: 0 0 20px 0;
@@ -524,16 +521,15 @@
 
   .paragraf_goldfish {
     margin: 23px 0 0 0;
-    grid-column-start: 1;
     font-weight: var(--text_weight_main);
   }
 
   .text_general_goldfish {
     margin-top: 12px;
-    grid-column-start: 1;
   }
 
   .section_image {
+    display: grid;
     margin-top: 21px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
