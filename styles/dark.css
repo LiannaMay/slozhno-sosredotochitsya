@@ -10,7 +10,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  :root.theme_dark .page {
+  .page.theme_dark {
     
     --color_acsent: #FF0070;
     --color_acsent_rec: #FF0070;
@@ -21,8 +21,38 @@
     --text-color_night:#000028;
     --bg_image: url(../images/cover-image-dark.png);
     --bg_fon:rgba(0,12,55, 1);
+    
   }
-.theme_dark .header__theme-menu-button:hover {
+
+/* .theme_dark .header__theme-menu-button:hover {
+  --color_acsent_hover:rgba(255, 0, 112, 0.4);
+}
+.header__theme-menu-button_active {
+  border: 1px solid  var(--color_acsent_text);
+}
+.assent_element::before {
+  position: absolute;
+  content: "rec";
+  top: 0px;
+  right: 0px;
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color_acsent: #FF0070;
+    --color_acsent_rec: #FF0070;
+    --color_acsent_title: #FF0070;
+    --color_acsent_text:#FF0070;
+    --text_color:#F1B2CE;
+    --text_color_FOCUS:#DB00FF;
+    --text-color_night:#000028;
+    --bg_image: url(../images/cover-image-dark.png);
+    --bg_fon:rgba(0,12,55, 1);
+    --color_acsent_hover:rgba(255, 0, 112, 0.4);
+  }
+}
+
+.header__theme-menu-button:hover {
   --color_acsent_hover:rgba(255, 0, 112, 0.4);
 }
 .header__theme-menu-button_active {
