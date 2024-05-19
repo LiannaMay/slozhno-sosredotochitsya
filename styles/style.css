@@ -56,13 +56,6 @@
   right: 45px;
 }
 
-.assent_element::before {
-  position: absolute;
-  content: "rec";
-  top: 0px;
-  right: 0px;
-}
-
 .assent_element::after {
   inset-inline-end: 0;
   inset-block-start: 50%;
@@ -184,7 +177,6 @@
 
 .section__multitasking {
   margin-top: 40px;
-  align-items: start;
   grid-template-columns: min-content 1fr;
   grid-template-rows: auto;
   row-gap: 5px;
@@ -193,29 +185,30 @@
 
 .section_concentration {
   margin-top: 64px;
-  align-items: start;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content min-content 1fr;
   column-gap: 20px;
 }
 
+.acticle_concentration {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
 .section_goldfish {
-  margin-top: 86px;
+  margin-top: 75px;
   column-gap: 20px;
-  align-items: start;
   grid-template-columns: min-content 1fr;
   grid-template-rows: auto;
   grid-auto-flow: dense;
 }
 
 .section_image {
+  display: grid;
   margin-top: 52px;
-  position: relative;
-  max-width: 100%;
   gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(4, min-content);
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .section_title {
@@ -227,6 +220,44 @@
   font-size: 18px;
   text-align: left;
   max-width: 315px;
+}
+
+.paragraf_image {
+  margin-top: 10px;
+  grid-column: 1 / span 3;
+}
+
+.image_general {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.image_sunset {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.image_ice_cream {
+  grid-column: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.image_tape {
+  grid-column: 1;
+  grid-row: 3 / span 2;
+}
+
+.image_books {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.image_street {
+  grid-column: 2 / span 2;
+  grid-row: 4;
 }
 
 .title_multitasking {
@@ -271,7 +302,7 @@
   font-weight: var(--text_weight_main);
 }
 
-.paragraf_goldfish_first {
+.paragraf_goldfish_accent {
   margin-bottom: 20px;
   grid-column-start: 2;
   font-weight: var(--text_weight_header);
@@ -304,39 +335,6 @@
 .text_general_goldfish {
   margin: 13px 0 20px 0;
   grid-column-start: 2;
-}
-
-.image_general {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-.image_sunset {
-  grid-column: 1 / span 2;
-  grid-row: 2;
-}
-
-.image_ice_cream {
-  grid-column: 3;
-  grid-row-start: 2;
-  grid-row-end: 4;
-}
-
-.image_tape {
-  grid-column: 1;
-  grid-row: 3 / span 2;
-}
-
-.image_books {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-.image_street {
-  grid-column: 2 / span 2;
-  grid-row: 4;
 }
 
 .footer {
@@ -393,10 +391,11 @@
   .section_concentration {
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
-    column-gap: 20px;
+    row-gap: 20px;
   }
 
   .title_concentration {
+    margin: 0 0 0 0;
     grid-column: 1;
     max-width: 236px;
     min-width: 236px;
@@ -405,12 +404,12 @@
   .paragraf_concentration {
     grid-column: 1;
     grid-row: auto;
+    margin: 0;
   }
 
   .text_general_concentration {
     grid-column: 1;
     grid-row: auto;
-    margin-bottom: 24px;
   }
 
   .title_goldfish {
@@ -419,7 +418,7 @@
   }
 
   .section_goldfish {
-    margin-top: 60px;
+    margin-top: 79px;
   }
 
   .text_general_goldfish {
@@ -428,6 +427,10 @@
 
   .text_general_goldfish:first-child {
     margin-top: -20px;
+  }
+
+  .section_image {
+    margin-top: 47px;
   }
 
   .footer {
@@ -470,7 +473,8 @@
   }
 
   .section__multitasking {
-    margin-top: 34px;
+    row-gap: 14px;
+    margin-top: 33px;
     grid-template-columns: min-content;
     grid-template-rows: auto;
   }
@@ -481,17 +485,15 @@
   }
 
   .paragraf_multitasking {
-    margin-top: 15px;
     grid-column-start: 1;
   }
 
   .text_general_multitasking {
-    margin-bottom: -16px;
     grid-column-start: 1;
   }
 
   .section_concentration {
-    margin-top: 56px;
+    margin-top: 35px;
     grid-template-rows: min-content min-content 1fr;
     max-width: 355px;
   }
@@ -509,11 +511,10 @@
 
   .text_general_concentration {
     grid-row-start: auto;
-    padding-top: 10px;
   }
 
   .section_goldfish {
-    margin-top: 32px;
+    margin-top: 52px;
     grid-template-columns: min-content;
     grid-auto-rows: min-content;
   }

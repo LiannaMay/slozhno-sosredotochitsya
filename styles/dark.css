@@ -4,20 +4,34 @@
   переключая тему
 */
 
-.page.theme_dark {
+/* .page.theme_dark { */
   
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --color_acsent: #FF0070;
-  --color_acsent_rec: #FF0070;
-  --color_acsent_title: #FF0070;
-  --color_acsent_text:#FF0070;
-  --text_color:#F1B2CE;
-  --text_color_FOCUS:#DB00FF;
-  --text-color_night:#000028;
-  --bg_image: url(../images/cover-image-dark.png);
-  --bg_fon:rgba(0,12,55, 1);
-  --color_acsent_hover:rgba(50, 49, 45, 0.4);
+  :root.theme_dark .page {
+    
+    --color_acsent: #FF0070;
+    --color_acsent_rec: #FF0070;
+    --color_acsent_title: #FF0070;
+    --color_acsent_text:#FF0070;
+    --text_color:#F1B2CE;
+    --text_color_FOCUS:#DB00FF;
+    --text-color_night:#000028;
+    --bg_image: url(../images/cover-image-dark.png);
+    --bg_fon:rgba(0,12,55, 1);
+  }
+.theme_dark .header__theme-menu-button:hover {
+  --color_acsent_hover:rgba(255, 0, 112, 0.4);
 }
+.header__theme-menu-button_active {
+  border: 1px solid  var(--color_acsent_title);
+}
+.assent_element::before {
+  position: absolute;
+  content: "rec";
+  top: 0px;
+  right: 0px;
+}
+
