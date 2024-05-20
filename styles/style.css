@@ -179,12 +179,12 @@
   margin-top: 40px;
   grid-template-columns: min-content 1fr;
   grid-template-rows: auto;
-  row-gap: 5px;
+  row-gap: 23px;
   column-gap: 20px;
 }
 
 .section_concentration {
-  margin-top: 64px;
+  margin-top: 85px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content min-content 1fr;
   column-gap: 20px;
@@ -197,16 +197,22 @@
 }
 
 .section_goldfish {
-  margin-top: 83px;
+  margin-top: 85px;
   column-gap: 20px;
   grid-template-columns: min-content 1fr;
   grid-template-rows: auto;
   grid-auto-flow: dense;
 }
 
+.section_goldfish-card {
+  flex-direction: column;
+  display: flex;
+  row-gap: 20px;
+}
+
 .section_image {
   display: grid;
-  margin-top: 52px;
+  margin-top: 66px;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -303,11 +309,10 @@
 }
 
 .paragraf_goldfish_accent {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   grid-column-start: 2;
   font-weight: var(--text_weight_header);
 }
-
 
 .text_general {
   font-family: "IBM Plex Mono", monospace;
@@ -319,7 +324,7 @@
 }
 
 .text_general_multitasking {
-  padding: 10px 0 20px 0;
+  padding: 10px 0 0 0;
   grid-column-start: 2;
 }
 
@@ -328,7 +333,7 @@
 }
 
 .text_general_goldfish {
-  margin: 13px 0 20px 0;
+  margin: 13px 0 0 0;
   grid-column-start: 2;
 }
 
@@ -412,20 +417,8 @@
     grid-row: span 3;
   }
 
-  .paragraf_goldfish_accent {
-    margin-bottom: 17px;
-  }
-
-  .text_general_goldfish {
-    margin-top: 14px;
-  }
-
-  .text_general_goldfish:first-child {
-    margin-top: -20px;
-  }
-
   .section_image {
-    margin-top: 47px;
+    margin-top: 70px;
   }
 
   .footer {
@@ -436,7 +429,6 @@
 /* МЕДИА ЗАПРОСЫ ДЛЯ ЭКРАНА 375 */
 
 @media (width <= 550px) {
-
   .header {
     height: 100%;
     padding: 10px;
@@ -473,64 +465,55 @@
   }
 
   .section__multitasking {
-    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    margin-top: 30px;
   }
 
   .title_multitasking {
     grid-column: 1;
-    /* min-width: 355px; */
-  }
-
-  .paragraf_multitasking {
-    margin: 18px 0 0 0;
   }
 
   .text_general_multitasking {
-    padding: 10px 0 13px 0;
+    padding: 10px 0 0 0;
   }
 
   .section_concentration {
-    margin-top: 40px;
-    grid-template-rows: min-content min-content 1fr;
-    /* max-width: 355px; */
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
   }
 
   .title_concentration {
-    margin: 0 0 20px 0;
     min-width: 315px;
     max-width: 355px;
   }
 
-  .paragraf_concentration {
-    margin: 0 0 0 0;
-  }
-
-  .text_general_concentration {
-    margin: 0 0 20px 0;
-  }
-
   .section_goldfish {
-    margin-top: 34px;
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .section_goldfish-card {
+    row-gap: 22px;
   }
 
   .title_goldfish {
     min-width: 355px;
     max-width: 355px;
-    padding: 0 0 20px 0;
   }
 
   .paragraf_goldfish {
-    margin: 23px 0 0 0;
     font-weight: var(--text_weight_main);
-  }
-
-  .text_general_goldfish {
-    margin-top: 12px;
   }
 
   .section_image {
     display: grid;
-    margin-top: 21px;
+    margin-top: 40px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-items: start;

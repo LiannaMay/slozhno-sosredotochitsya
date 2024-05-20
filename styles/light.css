@@ -35,3 +35,12 @@
     --color_acsent_hover:rgba(50, 49, 45, 0.4);
     }
   }
+
+    .header__theme-menu-button:hover {
+      border: 1px solid var(--color_acsent_hover);
+    }
+    
+    .header__theme-menu-button_active {
+      border: 1px solid  var(--color_acsent_text);
+    }
+  

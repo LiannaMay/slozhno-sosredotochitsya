@@ -21,7 +21,7 @@
     --text-color_night:#000028;
     --bg_image: url(../images/cover-image-dark.png);
     --bg_fon:rgba(0,12,55, 1);
-    
+    --color_acsent_hover:rgba(255, 0, 112, 0.4);
   }
 
 /* .theme_dark .header__theme-menu-button:hover {
@@ -53,7 +53,8 @@
 }
 
 .header__theme-menu-button:hover {
-  --color_acsent_hover:rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--color_acsent_hover);
+
 }
 .header__theme-menu-button_active {
   border: 1px solid  var(--color_acsent_text);
